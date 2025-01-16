@@ -6,18 +6,22 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  background-color: blanchedalmond;
 }
 
 .status {
-  font-size: 24px;
+  font-size: 30px;
   margin-bottom: 20px;
+  width: 100%;
 }
 
 .reset {
   margin-top: 20px;
   padding: 10px 20px;
   font-size: 16px;
+  border-radius: 10px;
   cursor: pointer;
+  background-color: aquamarine;
 }
 
 .reset:hover {
@@ -25,13 +29,13 @@
 }
 
 .square {
-  width: 50px;
-  height: 50px;
+  width: 100px;
+  height: 100px;
   background: white;
   border: 1px solid #999;
   font-size: 24px;
   text-align: center;
-  line-height: 50px;
+  line-height: 100px;
   cursor: pointer;
 }
 
@@ -41,8 +45,25 @@
 
 .board {
   display: grid;
-  grid-template-columns: repeat(3, 50px);
-  grid-template-rows: repeat(3, 50px);
+  grid-template-columns: repeat(3, 100px);
+  grid-template-rows: repeat(3, 100px);
   gap: 5px;
   margin: 20px;
+}
+
+.bangers-regular {
+  font-family: "Bangers", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.image {
+  height: 65px;
+   align-self: center;
+    display: flex
+}
+
+.title {
+  width: 100%;
+  font-size: 90px;
 }
