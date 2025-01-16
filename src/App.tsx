@@ -22,6 +22,11 @@ export const App: React.FC = () => {
       if (squares[a] && squares[a] === squares[b] && squares[a] === squares[c]) {
         return squares[a];
       }
+
+      const isBoardFull = squares.every((square) => square !== null);
+      if (isBoardFull) {
+        return 'none, its a draw';
+      }
     }
     return null;
   };
@@ -44,10 +49,11 @@ export const App: React.FC = () => {
   };
 
   return (
-    <div className="game">
+    <div className="game bangers-regular">
+      <div className="title">Tic Tac Toe</div>
       <div className="status">{status}</div>
       <Board squares={squares} onClick={handleClick} />
-      {winner ?? <button className="reset" onClick={resetGame}>Restart Game</button>}
+      {winner && <button className="reset bangers-regular" onClick={resetGame}>Restart Game</button>}
     </div>
   );
 };
